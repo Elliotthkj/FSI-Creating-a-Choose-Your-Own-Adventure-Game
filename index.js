@@ -1,10 +1,10 @@
 const leftMsg =
   "You come across a stray cat. It scampers off down a small hole, just large enough for you to crawl through. Do you follow it, or continue on your path?";
 const followMsg =
-  "You follow the cat to a colony of cats, nestled in a fort of warm blankets and subsisting off of inexplicably warm soup. They are content with you staying, but you wonder if you should spread the word about this magical safe haven.";
+  "You follow the cat to a colony of cats, nestled in a fort of warm blankets and subsisting off of inexplicably warm soup. They are content with you staying, but you wonder if you should snitch about this magical safe haven.";
 const catStayMsg = "You live happily amongst the cats for the rest of your days.";
-const spreadWordMsg =
-  "After leaving the cat colony, you are never able to find it again; without proof, no one believes your story, which passes into legend nonetheless.";
+const snitchMsg =
+  "After leaving the cat colony, you are never able to find it again; without proof, no one believes your story, which passes into legend nonetheless. Later, a familiar cat appears and scratches you. You get stitches.";
 const continueMsg =
   "You come across a chamber that reaches upward to a shining light above. There is a long, winding staircase, and a much quicker, but rickety-looking ladder that leads up toward the light. Which do you take?";
 const ladderMsg =
@@ -34,8 +34,8 @@ if (firstAnswer === "left") {
     let thirdAnswer = window.prompt(followMsg);
     if (thirdAnswer === "stay") {
       alert(catStayMsg);
-    } else if (thirdAnswer === "spread the word") {
-      alert(spreadWordMsg);
+    } else if (thirdAnswer === "snitch") {
+      alert(snitchMsg);
     } else {
       alert(retryMsg);
     }
