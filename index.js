@@ -2,7 +2,8 @@ const leftMsg =
   "You come across a stray cat. It scampers off down a small hole, just large enough for you to crawl through. Do you follow it, or continue on your path?";
 const followMsg =
   "You follow the cat to a colony of cats, nestled in a fort of warm blankets and subsisting off of inexplicably warm soup. They are content with you staying, but you wonder if you should snitch about this magical safe haven.";
-const catStayMsg = "You live happily amongst the cats for the rest of your days.";
+const catStayMsg =
+  "You live happily amongst the cats for the rest of your days.";
 const snitchMsg =
   "After leaving the cat colony, you are never able to find it again; without proof, no one believes your story, which passes into legend nonetheless. Later, a familiar cat appears and scratches you. You get stitches.";
 const continueMsg =
@@ -25,13 +26,14 @@ const drawMsg =
   "You draw the flower, capturing only a fraction of its beauty with your quill. You bring the drawing home, somewhat disappointed, but over time, discover joy in sharing it with your friends and family, recounting the story of your days as a sorcerer with the aid of the sketch.";
 const pickMsg =
   "You pick the flower and bring it home, and all marvel at its brilliance. However, over time it fades and eventually crumbles to dust.";
-const retryMsg = "That path is invalid, you died. Please refresh and try again.";
+const retryMsg =
+  "That path is invalid, you died. Please refresh and try again.";
 
-let firstAnswer = window.prompt("Do you head left or right?");
+let firstAnswer = window.prompt("Do you head left or right?").toLowerCase();
 if (firstAnswer === "left") {
-  let secondAnswer = window.prompt(leftMsg);
+  let secondAnswer = window.prompt(leftMsg).toLowerCase();
   if (secondAnswer === "follow") {
-    let thirdAnswer = window.prompt(followMsg);
+    let thirdAnswer = window.prompt(followMsg).toLowerCase();
     if (thirdAnswer === "stay") {
       alert(catStayMsg);
     } else if (thirdAnswer === "snitch") {
@@ -40,7 +42,7 @@ if (firstAnswer === "left") {
       alert(retryMsg);
     }
   } else if (secondAnswer === "continue") {
-    let thirdAnswer = window.prompt(continueMsg);
+    let thirdAnswer = window.prompt(continueMsg).toLowerCase();
     if (thirdAnswer === "ladder") {
       alert(ladderMsg);
     } else if (thirdAnswer === "staircase") {
@@ -52,9 +54,9 @@ if (firstAnswer === "left") {
     alert(retryMsg);
   }
 } else if (firstAnswer === "right") {
-  let secondAnswer = window.prompt(rightMsg);
+  let secondAnswer = window.prompt(rightMsg).toLowerCase();
   if (secondAnswer === "treasure") {
-    let thirdAnswer = window.prompt(treasureMsg);
+    let thirdAnswer = window.prompt(treasureMsg).toLowerCase();
     if (thirdAnswer === "stay") {
       alert(dragonStayMsg);
     } else if (thirdAnswer === "run") {
@@ -63,7 +65,7 @@ if (firstAnswer === "left") {
       alert(retryMsg);
     }
   } else if (secondAnswer === "away") {
-    let thirdAnswer = window.prompt(dragonAwayMsg);
+    let thirdAnswer = window.prompt(dragonAwayMsg).toLowerCase();
     if (thirdAnswer === "draw it") {
       alert(drawMsg);
     } else if (thirdAnswer === "pick it") {
